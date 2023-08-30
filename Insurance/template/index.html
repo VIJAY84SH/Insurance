@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Charges Prediction</title>
+    <link rel="stylesheet" href="/staticFiles/style.css">
+</head>
+<body>
+    <form action="{{url_for('predict')}}" method="post">
+        <input type="text" id="Age" placeholder="Age" name="Age"> <br> <br>
+        <input type="text" id="BMI" placeholder="BMI" name="BMI">
+        
+        <h3> Sex </h3>
+        <select name="Sex" id="g" required = "required">
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+        </select>
+
+        <h3> Children </h3>
+        <select name="Children" id="g" required = "required">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+
+        </select>
+
+        <h3> Smoker </h3>
+        <select name="Caesarean" id="research" required = "required">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+
+        <h3>Region</h3>
+        <select name="Region" id="research" required = "required">
+            <option value="0">northeast</option>
+            <option value="1">northwest</option>
+            <option value="2">southeast</option>
+            <option value="3">southwest</option>
+        </select>
+
+        <br><br><button id="sub" type="submit">Prediction</button>
+        <br>
+    </form>
+
+    <br><br>
+    {{Prediction_text}}
+
+</body>
+</html>
